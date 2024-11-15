@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="business.BookedRoom" table="BOOKEDROOM_TABLE">
+  <id name="flightBookingNo"> 
+  <column name="FLIGHTBOOKINGNO"/>
+      <generator class="native"/>
+			<!-- let hibernate choose id for new entities -->
+			
+		</id>
+                <many-to-one name="room" class="business.Room" update="true" insert="true" fetch="select">
+            <column name="ROOMNO" not-null="true" />
+        </many-to-one>
+  </class>
+</hibernate-mapping>
