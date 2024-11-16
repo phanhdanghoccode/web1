@@ -4,18 +4,9 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class displayFlights_jsp extends org.apache.jasper.runtime.HttpJspBase
-    implements org.apache.jasper.runtime.JspSourceDependent {
+public final class displayFlights_jsp extends org.apache.jasper.runtime.HttpJspBase {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
-
-  private static java.util.List<String> _jspx_dependants;
-
-  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
-
-  public java.util.List<String> getDependants() {
-    return _jspx_dependants;
-  }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
         throws java.io.IOException, ServletException {
@@ -39,7 +30,6 @@ public final class displayFlights_jsp extends org.apache.jasper.runtime.HttpJspB
       session = pageContext.getSession();
       out = pageContext.getOut();
       _jspx_out = out;
-      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\n");
       out.write("\n");
@@ -69,7 +59,7 @@ public final class displayFlights_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("</table>\n");
       out.write("        ");
 
-            String disp = (String)request.getAttribute("info");
+            String disp = (String) request.getAttribute("info");
             out.println(disp);
             
       out.write("\n");
